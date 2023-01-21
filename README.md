@@ -5,6 +5,10 @@ Initially the code only permits to read information, in the future i will try to
 
 This code is tested with Astral Pool Chlorinator Smart Next, and could be compatible with other Astral Pool models with built in RS-485 port communication.
 
+## Project Status 
+
+UNDER DEVELOPMENT
+
 ## Atral Pool Chlorinator Documentation
 
 Here you can find ./documentation/man_60363_modbus_en-131505.pdf
