@@ -98,6 +98,8 @@ MQTT parameters are passed through environment variables:
  - `PIO_MQTT_HOST_IP`: MQTT broker IPv4
  - `PIO_MQTT_PORT`: MQTT broker port
  - `PIO_MQTT_TOPIC`: root prefix of the published topic
+ - `PIO_MQTT_USER`: user for mqtt broquer
+ - `PIO_MQTT_PASSWORD`: password for mqtt broquer
 
 With `PIO_MQTT_TOPIC=MyTopic`, based on the register list example above, the published MQTT message will be:
 ```

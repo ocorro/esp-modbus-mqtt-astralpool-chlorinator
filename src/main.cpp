@@ -331,6 +331,8 @@ void setup() {
   IPAddress mqtt_ip;
   mqtt_ip.fromString(MQTT_HOST_IP);
   mqtt_client.setServer(mqtt_ip, MQTT_PORT);
+  mqtt_client.setCredentials(MQTT_USER, MQTT_PASSWORD);
+  
 
   wifiManager.autoConnect();
 

@@ -25,7 +25,7 @@
 
 typedef enum {
     MODBUS_TYPE_HOLDING = 0x00,         /*!< Modbus Holding register. */
-    MODBUS_TYPE_INPUT = 0x01,           /*!< Modbus Input register. */
+    MODBUS_TYPE_INPUT = 0x01           /*!< Modbus Input register. */
 //    MODBUS_TYPE_COIL,                   /*!< Modbus Coils. */
 //    MODBUS_TYPE_DISCRETE,               /*!< Modbus Discrete bits. */
 //    MODBUS_TYPE_COUNT,

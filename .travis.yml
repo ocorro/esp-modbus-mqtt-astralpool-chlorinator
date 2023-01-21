@@ -4,6 +4,8 @@ env:
     - PIO_MQTT_HOST_IP=127.0.0.1
     - PIO_MQTT_PORT=1883
     - PIO_MQTT_TOPIC=topic
+    - PIO_MQTT_USER=user
+    - PIO_MQTT_PASSWORD=password
 
 language: python
 python:

@@ -105,12 +105,12 @@ bool _getModbusResultMsg(ModbusMaster *node, uint8_t result) {
 }
 
 bool _getModbusValue(uint16_t register_id, modbus_entity_t modbus_entity, uint16_t *value_ptr) {
+  uint8_t result;
   ESP_LOGD(TAG, "Requesting data");
   for (uint8_t i = 1; i <= MODBUS_RETRIES + 1; ++i) {
     ESP_LOGV(TAG, "Trial %d/%d", i, MODBUS_RETRIES + 1);
     switch (modbus_entity) {
       case MODBUS_TYPE_HOLDING:
-        uint8_t result;
         result = modbus_client.readHoldingRegisters(register_id, 1);
         if (_getModbusResultMsg(&modbus_client, result)) {
           *value_ptr = modbus_client.getResponseBuffer(0);
@@ -119,7 +119,6 @@ bool _getModbusValue(uint16_t register_id, modbus_entity_t modbus_entity, uint16
         }
         break;
       case MODBUS_TYPE_INPUT:
-        uint8_t result;
         result = modbus_client.readInputRegisters(register_id, 1);
         if (_getModbusResultMsg(&modbus_client, result)) {
           *value_ptr = modbus_client.getResponseBuffer(0);
