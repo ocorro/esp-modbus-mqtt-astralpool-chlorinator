@@ -17,11 +17,6 @@ Here you can find ./documentation/man_60363_modbus_en-131505.pdf
 
 This project is based on the @gmasse project https://github.com/gmasse/esp-modbus-mqtt 
 
-# esp-modbus-mqtt
-[![Build Status](https://travis-ci.com/gmasse/esp-modbus-mqtt.svg?branch=master)](https://travis-ci.com/gmasse/esp-modbus-mqtt)
-
-A Modbus RTU (RS-485) to MQTT Gateway (based on ESP32)
-
 ## Circuit
 
 Auto-switching UART-to-RS485 converter:
@@ -138,6 +133,8 @@ You can upload to ESP with: `platformio run upload`
 - [ ] Secure Boot
 - [ ] Moving to ESP-IDF Framework
 - [ ] Log level update at runtime
+- [ ] credentials to connect MQTT broquer
+
 
 ## FAQ
 #### Passing environment variables via VS Code

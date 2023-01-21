@@ -118,6 +118,15 @@ bool _getModbusValue(uint16_t register_id, modbus_entity_t modbus_entity, uint16
           return true;
         }
         break;
+      case MODBUS_TYPE_INPUT:
+        uint8_t result;
+        result = modbus_client.readInputRegisters(register_id, 1);
+        if (_getModbusResultMsg(&modbus_client, result)) {
+          *value_ptr = modbus_client.getResponseBuffer(0);
+          ESP_LOGV(TAG, "Data read: %x", *value_ptr);
+          return true;
+        }
+        break;
       default:
         ESP_LOGW(TAG, "Unsupported Modbus entity type");
         value_ptr = nullptr;
