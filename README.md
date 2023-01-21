@@ -1,3 +1,18 @@
+## Introduction
+This project is intended to get information from Astral Pool Chlorinators and publish it to mqtt browser, this information can be stores into influxdb or be showed into homeassistant dashboard
+
+Initially the code only permits to read information, in the future i will try to manage some write registers to communicate with the clhorinator.
+
+This code is tested with Astral Pool Chlorinator Smart Next, and could be compatible with other Astral Pool models with built in RS-485 port communication.
+
+## Atral Pool Chlorinator Documentation
+
+Here you can find ./documentation/man_60363_modbus_en-131505.pdf
+
+## Thanks 
+
+This project is based on the @gmasse project https://github.com/gmasse/esp-modbus-mqtt 
+
 # esp-modbus-mqtt
 [![Build Status](https://travis-ci.com/gmasse/esp-modbus-mqtt.svg?branch=master)](https://travis-ci.com/gmasse/esp-modbus-mqtt)
 
